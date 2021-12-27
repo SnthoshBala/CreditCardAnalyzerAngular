@@ -1,0 +1,33 @@
+<div class="container-table">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title ">User list</h4>
+        <p class="card-category"> Here is a list of all pdf documents</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th> Name </th>
+              <th> Account number </th>
+
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of itemList; let idx=index" >
+                <td> {{item.customerName}} </td>
+                <td> {{item.customerAccNumber}} </td>
+            
+                <td>
+                  <!-- <i class="material-icons float-left" (click)="btnClick(idx)">access_time</i> -->
+                  <!-- <button class="btn btn-info" (click)="btnClick(idx + 1)" >Open</button> -->
+                  <i class="material-icons float-left" (click)="btnClick(idx + 1)">open_in_new</i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+h4{
+  font-size: 1.125rem;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  border: 0;
+  font-size: .875rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 6px;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 14%);
+}
+
+.card [class*=card-header-]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) {
+  border-radius: 3px;
+  margin-top: -20px;
+  padding: 15px;
+}
+
+.card [class*=card-header-] .card-title+.card-category {
+  color: rgba(255,255,255,.62);
+}
+
+.card .card-header-danger .card-icon, .card .card-header-danger .card-text, .card .card-header-danger:not(.card-header-icon):not(.card-header-text) {
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(244 67 54 / 40%);
+}
+.card .card-header-danger .card-icon, .card .card-header-danger .card-text, .card .card-header-danger:not(.card-header-icon):not(.card-header-text), .card.bg-danger, .card.card-rotate.bg-danger .back, .card.card-rotate.bg-danger .front {
+  background: linear-gradient(
+60deg,#ef5350,#e53935);
+}
+.card [class*=card-header-] {
+  margin: 0 15px;
+  padding: 0;
+  position: relative;
+}
+.card [class*=card-header-], .card [class*=card-header-] .card-title, .card [class*=card-header-] .card-title a, .card [class*=card-header-] .icon i, .card[class*=bg-], .card[class*=bg-] .card-title, .card[class*=bg-] .card-title a, .card[class*=bg-] .icon i {
+  color: #fff;
+}
+.card .card-header {
+  border-bottom: none;
+  background: 0 0;
+  z-index: 3!important;
+}
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card .table tr:first-child td {
+  border-top: none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+.card .card-body {
+  padding: 0.9375rem 20px;
+  position: relative;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.text-primary {
+  color: #9c27b0!important;
+}
+td{
+  padding: 0.75rem;
+  
+}
+
+i{
+  cursor: pointer;
+}
+
+th{
+  background-color: #fff;
+  color:#333333;
+}
+// tr{
+//   cursor: pointer;
+  
+// }
+
+// tr:hover{
+//   background-color: blanchedalmond;
+// }
+
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+@media (min-width: 768px) {
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

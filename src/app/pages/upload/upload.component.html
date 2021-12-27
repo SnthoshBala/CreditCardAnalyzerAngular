@@ -1,0 +1,55 @@
+<div class="progress" *ngIf="cust.file">
+  <!-- <div
+    class="progress-bar progress-bar-striped bg-danger"
+    attr.aria-valuenow="{{ progress }}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [ngStyle]="{ width: progress + '%' }"
+  >
+    {{ progress }}%
+  </div> -->
+</div>
+<h1>Upload your Credit Card Statement and Get Detail Analytics of Expenses</h1>
+<div container-btns>
+  <label class="btn btn-default btn-upload">
+    <mat-icon>picture_as_pdf</mat-icon>
+    <label for="files" class="btn">
+      
+      Select file</label>
+    <input id="files"style="display:none" type="file" (change)="chooseFile($event)" />
+  </label>
+  
+  <button class="btn btn-primary btn-upload-submit" [disabled]="!cust" (click)="upload()" >
+  <mat-icon>cloud_upload</mat-icon>   <span>Upload</span>
+</button>
+</div>
+<br>
+<br>
+<span class="text-success alert " style='background:transparent'>{{ successmsg }}</span>
+<span class="text-danger alert " style='background:transparent'>{{ errmsg }}</span>
+<img src="{{imageToShow}}" *ngIf="image">
+<br>
+<br>
+<br>
+<br>
+<app-chart-upload *ngIf="image"></app-chart-upload>
+<br>
+<br>
+<br>
+<br>
+<app-type-pie-chart *ngIf="image" class="center"></app-type-pie-chart>
+<br>
+
+<div class="card">
+  <div class="card-header">Files Info</div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let file of FileDetail | async">
+    <li class="list-group-item">
+      <a href="{{ file.url }}">{{ file.name }}</a>
+    </li>
+  </ul>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,18 @@
+<div class="chart-border">
+  <h2>Your Expenses in Detailed View</h2>
+<div style="display: block; width: 500px; height: 500px;">
+    <div class="chart">
+      <canvas baseChart
+              height="100%"
+              width="100%"
+              *ngIf="mychart"
+              [data]="pieChartData"
+              [type]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [legend]="pieChartLegend">
+      </canvas>
+    </div>
+
+</div>
+</div>
