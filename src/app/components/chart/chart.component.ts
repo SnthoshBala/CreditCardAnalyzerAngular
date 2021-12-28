@@ -25,8 +25,8 @@ export class ChartUploadComponent implements OnInit {
         console.log(this.payment)
         for(var item of datas)
         {
-          var x=Number(item['rewards_points'].slice(1))
-          var y=Number(item['amount_spent'].slice(1))
+          var x=Number(item['rewards_points'].replace(",","").slice(1))
+          var y=Number(item['amount_spent'].replace(",","").slice(1))
           var total=total+y
           var reward=reward+x
         }

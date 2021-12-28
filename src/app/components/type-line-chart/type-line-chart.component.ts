@@ -72,9 +72,9 @@ export class TypeLineChartComponent implements OnInit {
   ngOnInit(): void {
     this.lineChartData.labels =  JSON.parse(localStorage?.getItem("object") || '{}').customerCreditPurchase.map((el: { date: any; }) => el.date);
 
-    this.lineChartData.datasets[0].data =  JSON.parse(localStorage?.getItem("object") || '{}').customerCreditPurchase.map((el: { amount_spent: any; }) => el.amount_spent.slice(1));
+    this.lineChartData.datasets[0].data =  JSON.parse(localStorage?.getItem("object") || '{}').customerCreditPurchase.map((el: { amount_spent: any; }) => el.amount_spent.replace(",","").slice(1));
 
-    this.lineChartData.datasets[1].data =  JSON.parse(localStorage?.getItem("object") || '{}').customerCreditPurchase.map((el: { rewards_points: any; }) => el.rewards_points.slice(1));
+    this.lineChartData.datasets[1].data =  JSON.parse(localStorage?.getItem("object") || '{}').customerCreditPurchase.map((el: { rewards_points: any; }) => el.rewards_points.replace(",","").slice(1));
 
     
     
